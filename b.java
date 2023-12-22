@@ -7,6 +7,7 @@ public class Student {
     public Student(String name, double finalGrade) {
         this.name = name;
         this.finalGrade = finalGrade;
+        
     }
  public String calculateGrade() {
         if (finalGrade >= 90) {
