@@ -12,7 +12,7 @@ jobs:
         run : echo "branch name is ${{github.ref}}"
       - name : checkout the repo
         uses : actions/checkout@v4
-      - run   : echo "checkout ${{github.repository}}"
+      - run  : echo "checkout ${{github.repository}}"
       - name : list files of repo
         run : ls ${{github.workspace}}
 
