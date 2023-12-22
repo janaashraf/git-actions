@@ -1,18 +1,19 @@
 name : run automated test
-on : pull_request :
+on :
+    pull_request :
        branches :
-        - main
+         - main
 jobs : 
    test :
-   runs on: upuntu-latest
-   steps: 
-   -name : checkout
-   uses: actions/checkout@v4
+    runs on: upuntu-latest
+    steps: 
+      - name : checkout
+        uses: actions/checkout@v4
    
-   - name : setup gradle
-   run : gradle/gradle-build-action@v2
-   - name: run gradle
-     run : ./gradlew test
+       - name : setup gradle
+       run : gradle/gradle-build-action@v2
+       - name: run gradle
+       run : ./gradlew test
         
   
 
