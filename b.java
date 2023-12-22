@@ -8,6 +8,7 @@ public class Student {
         this.name = name;
         this.finalGrade = finalGrade;
         
+        
     }
  public String calculateGrade() {
         if (finalGrade >= 90) {
