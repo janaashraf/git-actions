@@ -8,15 +8,15 @@ public class Student {
         this.name = name;
         this.finalGrade = finalGrade;
         
-        
+
     }
  public String calculateGrade() {
-        if (finalGrade >= 90) {
+        if (finalGrade >= 90 && finalGrade <= 100) {
             return "A";
         } else if (finalGrade >= 80) {
-            return "C";
-        } else if (finalGrade >= 70) {
             return "B";
+        } else if (finalGrade >= 70) {
+            return "C";
         } else if (finalGrade >= 60) {
             return "D";
         } else {
