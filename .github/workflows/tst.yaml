@@ -1,18 +1,18 @@
-name : GitHub-Actions
-on : push
-jobs:
-    explore-github-actions:
-     runs-on: ubuntu-latest
-     steps:
-      - name : print the triggered action
-        run : echo "the job was triggered by ${{github.event_name}}"
-      - name : print os of runner
-        run : echo "the running os is ${{runner.os}}"
-      - name : print branch name
-        run : echo "branch name is ${{github.ref}}"
-      - name : checkout the repo
-        uses : actions/checkout@v4
-      - run   : echo "checkout ${{github.repository}}"
-      - name : list files of repo
-        run : ls ${{github.workspace}}
+name : run automated test
+on : pull_request :
+       branches :
+        - main
+jobs : 
+   test :
+   runs on: upuntu-latest
+   steps: 
+   -name : checkout
+   uses: actions/checkout@v4
+   
+   - name : setup gradle
+   run : gradle/gradle-build-action@v2
+   - name: run gradle
+     run : ./gradlew test
+        
+  
 
